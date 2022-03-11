@@ -1,10 +1,13 @@
 function compute()
 {
     var principal = document.getElementById("principal").value;
-
-    console.log(isNaN(principal))
+    // Validate the input of principal
     if (!(Number(principal) > 0)) {
-        alert("Enter a positive number")
+        alert("Enter a positive number");
+        document.getElementById("principal").value = "";
+        document.getElementById("principal").focus();
+        document.getElementById("result").innerHTML = "";
+        return
     }
 
     var rate = document.getElementById("rate").value;
@@ -25,10 +28,10 @@ function compute()
 
     // Display the result base on the input
     document.getElementById("result")
-        .innerHTML=`If you deposit <mark>${principal}</mark>,<br\>
+        .innerHTML = `If you deposit <mark>${principal}</mark>,<br\>
             at an interest rate of <mark>${rate}%</mark>.<br\>
             You will receive an amount of <mark>${amount}</mark>,<br\>
-            in the year <mark>${year}</mark><br\>`
+            in the year <mark>${year}</mark><br\>`;
 }
 
 function updateRate() 

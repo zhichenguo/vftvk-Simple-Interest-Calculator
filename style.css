@@ -9,11 +9,37 @@ h1{
     font-family: verdana
 }
 
-.maindiv {
+.main-div {
     background-color: white;
+    font-weight: 550;
     color: black;
-    width: 300px;
+    width: 500px;
     padding: 20px;
     border-radius: 25px;
-    align: center
+    margin: auto;
+}
+
+td {
+    padding: 6px;
+}
+
+.col-0 {
+    width: 150px;
+}
+
+.col-1 {
+    width: 200px;
+}
+
+.col-2 {
+    width: 300px;
+}
+
+.col-3 {
+    width: 500px;
+}
+
+table {
+    border: none;
+    text-align: left;
 }
